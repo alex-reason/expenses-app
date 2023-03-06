@@ -1,0 +1,146 @@
+@import './variables.scss';
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    max-width: 960px;
+    margin: 4rem auto;
+
+    @media screen and (max-width: $screen-md) {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 1rem auto;
+    }
+}
+
+.content {
+    padding-right: 2rem;
+
+    @media screen and (max-width: $screen-md) {
+        padding: 2rem;
+
+        @media screen and (max-width: $screen-sm) {
+            padding: 1rem;
+         }
+    }
+
+    .error {
+        text-align: center;
+        color: #5d5d5d;
+    }
+}
+
+.sidebar {
+    padding-left: 2rem;
+
+    @media screen and (max-width: $screen-md) {
+        padding: 2rem;
+    }
+
+    form {
+        padding: 1.5rem;
+        background: $color-primary;
+        border-radius: 10px;
+    }
+
+    input,
+    select {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-top: .5rem;
+        box-sizing: border-box;
+        border: 0;
+        border-radius: 4px;
+        color: #555;
+        font-size: 1rem;
+    }
+
+    label {
+        margin: 0 auto 1.5rem;
+        display: block;
+        color: #fff;
+    }
+
+    button {
+        color: #fff;
+        border: 2px solid #fff;
+        padding: 6px 12px;
+        background-color: transparent;
+        font-size: 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+        display: block;
+        width: 100%;
+
+        &:hover {
+            background-color: #fff;
+            color: $color-primary;
+            font-weight: 600;
+        }
+
+        @media screen and (max-width: $screen-md) {
+            width: 20%;
+        }
+    }
+
+    h3 {
+        color: $color-primary;
+        margin-bottom: 1.5rem;
+    }
+
+    aside {
+        margin-top: 3rem;
+        color: #555;
+
+        li {
+            margin: 10px;
+        }
+    }
+
+}
+
+.transactions {
+    li {
+        margin: 2rem auto;
+        border: 1px solid #f2f2f2;
+        box-shadow: 3px 3px 5px rgba(50, 50, 50, 0.1);
+        padding: 1.5rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        border-left: 4px solid $color-primary;
+
+        @media screen and (max-width: $screen-sm) {
+           margin: 1rem auto;
+        }
+    }
+
+    .name {
+        color: #777;
+        font-size: 1.4em;
+    }
+
+    .amount {
+        margin-left: auto;
+        margin-right: 3rem;
+        color: #777;
+        font-weight: bold;
+        font-size: 1.6rem;
+    }
+
+    button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #ddd;
+        color: #777;
+        border: none;
+        padding: 12px 8px;
+        text-align: center;
+        line-height: 0;
+        font-size: .9rem;
+        cursor: pointer;
+    }
+}
